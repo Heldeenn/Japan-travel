@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed|Spartan&display=swap');
+
+:root {
+  --main-color: rgb(231, 191, 212);
+  --dark: rgb(39, 12, 30);
+  --light: rgb(249, 235, 245);
+
+  --main-font: 'Lato', sans-serif;
+  --title-font: 'Roboto Condensed', sans-serif;
+
+  --padding-sm: calc(var(--padding) / 2);
+  --padding: 16px;
+  --padding-lg: calc(var(--padding) * 2);
+
+  --margin-sm: calc(var(--margin) / 2);
+  --margin: 50px;
+  --margin-lg: calc(var(--margin) * 2);
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: 14pt;
+  margin:0;
+}
+
+h1, h2, h3, h4, .navbar {
+  font-family: var(--title-font);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  /*font-family: 'Spartan', sans-serif;*/
+  background-color: var(--main-color);
+  display: flex;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  /*border-bottom: 2px solid var(--dark);*/
+}
+
+.navbar .brand {
+  font-size: 24pt;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .brand img {
+  width: 120px;
+}
+
+.links a {
+  font-size: 16pt;
+  text-decoration: none;
+  color: var(--dark);
+  padding-left: var(--padding);
+}
+
+.links a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#who {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: var(--margin);
+  padding-top: var(--padding-lg);
+}
+
+#who img {
+  width: 40%;
+  height: 350px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.whoIam {
+  width: 45%;
+  padding-left: var(--padding-lg);
+  text-align: justify;
+}
+
+
+h2 {
+  margin-left: var(--margin);
+  margin-right: var(--margin);
+  /*width: 80%;*/
+  padding-top: var(--padding-lg);
+  border-bottom: 5px solid var(--dark);
+  text-transform: uppercase;
+}
+
+.top15 {
+  display: flex;
+  justify-content: center;
+}
+
+.top5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: var(--margin-lg);
+  padding-right: 30px;
+  width: 100%;
+}
+
+.articles {
+  /*display: flex;*/
+  padding-bottom: var(--padding-lg);
+}
+
+.top5 h3 {
+  font-size: 25pt;
+  border-top: 9px solid var(--dark);
+  background-color: var(--dark);
+  color: var(--light);
+  padding-left: var(--padding);
+  height: 50px;
+  /*width: 90%;*/
+}
+
+.articles img {
+  width: 30%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+  float: left;
+  padding-right: var(--padding);
+}
+
+.articles p {
+  text-align: justify;
+}
+
+.articles a {
+  color: var(--dark);
+  text-decoration: none;
+  font-size: 20pt;
+}
+
+.articles a:hover {
+  color: var(--main-color);
+}
+
+.others {
+  font-size: 12pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.others h4 {
+  font-size: 20pt;
+  border-bottom: 3px solid var(--dark);
+  width: 80%;
+}
+
+.articles2 {
+
+}
+
+.articles2 img {
+  width: 15%;
+  float: left;
+  /*height: 100px;
+  object-fit: cover;
+  object-position: top;*/
+  padding-right: var(--padding);
+}
+
+.articles2 a {
+  color: var(--dark);
+  text-decoration: none;
+  font-size: 17pt;
+}
+
+.articles2 a:hover {
+  color: var(--main-color);
+}
+
+/* --------- FORM -------------*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: auto;
+}
+
+input, textarea {
+  width: 100%;
+  margin-bottom: var(--margin-sm);
+}
+
+button {
+  align-self: flex-end;
+  margin-left: auto;
+  padding: 8px 16px;
+  border: none;
+  color: var(--light);
+  background-color: var(--dark);
+  text-transform: uppercase;
+  border-radius: 2px;
+  margin-bottom: var(--margin);
+}
+
+/* ----------FOOTER -----------*/
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+footer p,
+footer a {
+  margin: auto;
+  padding: var(--padding);
+}
+
+footer p {
+  font-size: 16pt;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--light);
+}
+
+footer a:hover {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+
+/* -----RESPONSIVE ELEMENTS -----*/
+
+.menu {
+  display: none;
+}
+
+/* ----------RESPONSIVE DESIGN ----------*/
+
+@media screen and (max-width:616px) {
+  .links {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    font-size: 16pt;
+    text-decoration: none;
+    color: var(--dark);
+    padding-right: var(--padding);
+  }
+
+  #who {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  #who img {
+    width: 100%;
+    margin: 0;
+  }
+
+  .whoIam {
+    width: 90%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .top15 {
+    display: block;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  h2 {
+    margin-left: var(--margin-sm);
+    margin-right: var(--margin-sm);
+  }
+
+  .top5 {
+    margin-left: var(--margin-sm);
+    margin-right: var(--margin-sm);
+    padding-left: 0;
+    width: 92%;
+  }
+  .others {
+    margin-left: var(--margin-sm);
+  }
+}
