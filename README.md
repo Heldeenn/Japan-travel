@@ -1,4 +1,4 @@
-# Japan-trip
+# Japan-travel
 Site on my travel in Japan
 
 ## Description
